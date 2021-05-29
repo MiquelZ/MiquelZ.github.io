@@ -307,6 +307,7 @@ body {
 
 .blog .box .image img {
     width: 100%;
+    opacity: 0.6;
 }
 
 .blog .box .image a {
@@ -352,8 +353,10 @@ body {
 
 /* Contact */
 .contact {
-    padding: 0 0 130px 0;
-    background: #2d2e2e;
+    padding: 100px 0 100px 0;
+    background: url('../img/bg/some-facts-bg.png') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .contact h2 {
@@ -393,7 +396,6 @@ body {
     margin: 10px 0 20px 0;
     color: #eee;
 }
-
 
 /* Footer */
 .footer {
