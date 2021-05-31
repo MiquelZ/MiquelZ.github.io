@@ -51,6 +51,7 @@ body {
 /* Slider */
 .slider {
     background: url('../img/bg/slider-bg.png') center center no-repeat;
+    background-size: cover;
     height: calc(100vh - 92px);
     background-attachment: fixed;
     display: flex;
