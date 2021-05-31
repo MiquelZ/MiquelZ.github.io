@@ -1,6 +1,12 @@
+/* Normalize */
+html,body {
+    overflow-x: hidden; 
+}
+
 /* Body */
 body {
     font-family: 'Muli', sans-serif;
+    margin: 0;
 }
 
 /* Navbar */
@@ -473,12 +479,11 @@ hr {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-
-     /* Slider*/
-     .slider {
+    /* Slider */
+    .slider {
         height: calc(100vh - 80px);
         margin-top: 80px;
-     }
+    }
 
     .slider .left-content {
         padding: 0;
@@ -486,7 +491,7 @@ hr {
     }
 
     .animated-headlines .cd-headline span {
-        font-size: 30px;
+        font-size: 20px!important;
     }
 
     /* About Me */
