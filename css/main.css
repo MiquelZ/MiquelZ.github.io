@@ -171,7 +171,15 @@ body {
 }
 
 /* Skills */
+hr {
+    border-top: 3px solid #212222;
+    border-left: 200px solid #2d2e2e;
+    border-right: 200px solid #2d2e2e;
+    margin: 0 0 0 0;
+}
+
 .services {
+    padding-top: 110px;
     padding-bottom: 90px;
     background: #2d2e2e;
 }
