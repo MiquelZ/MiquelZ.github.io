@@ -1,94 +1,104 @@
-/* General scan section */
+/* GENERAL SCAN SECTION */
 #scan {
     /* Fill the card */
     position: relative;
     width: 100%;
     height: 100%;
-    /* Center the bowl */
+    /* Center the scan */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-/* Fingerprint scan */
+/* FINGERPRINT AND SCAN */
+/* Gray fingerprint (not scanned) */
 .fingerprint {
+    /* Image */
 	position: relative;
-	width: 300px;
-	height: 380px;
+	width: 210px;
+	height: 266px;
 	background-image: url("../img/fingerprint1.png");
-	background-size: 300px;
+	background-size: 210px;
 }
 
-.fingerprint::before 
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
+/* Blue fingerprint (scanned) */
+.fingerprint::before {
+    /* Image */
 	width: 100%;
 	height: 100%;
 	background: url("../img/fingerprint2.png");
-	background-size: 300px;
-	animation: animate 4s ease-in-out infinite;
+	background-size: 210px;
+    /* Position */
+    top: 0;
+	left: 0;
+    /* Extra details */
+    content: '';
+	position: absolute;
+	animation: animateFingerprint 4s ease-in-out infinite; /* Repeat animation with a slow start and slow end (4 seconds), all the time */
 }
-@keyframes animate 
-{
-	0%,100% 
-	{
+
+/* Blue scan line (drawn with CSS) */
+.fingerprint::after {
+    /* Drawing */
+    width: 100%;
+	height: 6px;
+    border-radius: 4px;
+	background-color: #3fefef;
+    background-size: 210px;
+    filter: drop-shadow(0 0 14px #3fefef) drop-shadow(0 0 42px #3fefef); /* Glowing effect */
+    box-shadow: 0 0 17px #000;
+    /* Position */
+    top: 3%;
+	left: 0;
+    /* Extra details */
+    content: '';
+    position: absolute;
+	animation: animateScanLine 4s ease-in-out infinite; /* Repeat animation with a slow start and slow end (4 seconds), all the time */
+}
+
+/* Scanning text */
+.scanningText {
+    /* Text properties */
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+    color: #3fefef;
+    /* Extra details */
+	margin-top: 25px;
+	opacity: 0;
+	filter: drop-shadow(0 0 14px #3fefef) drop-shadow(0 0 42px #3fefef);
+	animation: animateText 0.6s steps(1) infinite; /* Repeat animation (0.6 seconds), with only 1 step (less smooth and less continuous on purpose), all the time */
+}
+
+/* ANIMATIONS */
+/* Fingerprint image animation, appear and disappear from top to bottom */
+@keyframes animateFingerprint {
+	0%, 100% {
 		height: 0;
 	}
-	50%
-	{
+	50% {
 		height: 100%;
 	}
 }
-.fingerprint::after 
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 8px;
-	border-radius: 6px;
-	background: #3fefef;
-	box-shadow: 0 0 25px #000;
-	filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
-	background-size: 300px;
-	animation: animate_fingerprint 4s ease-in-out infinite;
-}
-@keyframes animate_fingerprint 
-{
-	0%,100% 
-	{
-		top: 0;
+
+/* Scan line animation, move from top to bottom */
+@keyframes animateScanLine {
+	0%, 100% {
+		top: 3%;
 	}
-	50%
-	{
-		top: 100%;
+	50% {
+		top: 97%;
 	}
 }
-.scan h3 
-{
-	font-family: consolas;
-	text-transform: uppercase;
-	font-size: 2em;
-	letter-spacing: 2px;
-	margin-top: 20px;
-	opacity: 0;
-	color: #3fefef;
-	filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef);
-	animation: animateText 0.5s steps(1) infinite;
-}
-@keyframes animateText 
-{
-	0%,100%
-	{
+
+/* Text animation, appear and disappear */
+@keyframes animateText {
+	0%, 100% {
 		opacity: 0;
 	}
-	50%
-	{
+	50% {
 		opacity: 1;
 	}
 }

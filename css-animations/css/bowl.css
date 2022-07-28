@@ -108,7 +108,7 @@
 }
 
 /* ANIMATIONS */
-/* Bowl animation */
+/* Bowl animation, rotate the bowl from side to side and change the liquid color */
 @keyframes bowlAnimation {
     0% {
         filter: hue-rotate(0deg); /* Change the liquid color */
@@ -129,10 +129,10 @@
     }
 }
 
-/* Liquid animation */
+/* Liquid animation, rotate the liquid (opposite direction of the bowl) */
 @keyframes liquidAnimation {
     0% {
-        transform: rotate(0deg); /* Rotate the liquid */
+        transform: rotate(0deg);
     }
     25% {
         transform: rotate(-20deg);

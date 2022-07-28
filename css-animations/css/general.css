@@ -52,9 +52,10 @@ body {
     background-color: cornsilk;
     opacity: 0;
     transition: 0.5s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Appear card details when hover with mouse */
 .card:hover .details {
-    opacity: 0.85;
+    opacity: 0.9;
 }
