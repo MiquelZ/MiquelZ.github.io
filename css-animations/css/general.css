@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: dimgray;
+}
+
+/* Cards general section */
+#general {
+    margin: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid, minimum card width 350px */
+    grid-gap: 2rem;
+}
+
+/* Cards style */
+.card {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #121212;
+    box-shadow: 0 10px 40px black;
+}
+
+/* Card content style */
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Card details style */
+.card .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: cornsilk;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* Appear card details when hover with mouse */
+.card:hover .details {
+    opacity: 0.85;
+}

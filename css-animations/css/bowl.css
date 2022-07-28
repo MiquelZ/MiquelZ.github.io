@@ -1,0 +1,149 @@
+/* GENERAL BOWL SECTION */
+#bowlSection {
+    /* Fill the card */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Center the bowl */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOWL AND LIQUID DRAWING, USING CSS */
+/* Main bowl body */
+.bowl {
+    /* Drawing */
+    width: 210px;
+    height: 210px;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Extra details */
+    position: relative;
+    transform-origin: bottom center;
+    animation: bowlAnimation 5s linear infinite; /* Repeat animation at same speed (5 seconds), all the time */
+}
+
+/* Upper-bowl circle */
+.bowl::before {
+    /* Drawing */
+    width: 40%;
+    height: 21px;
+    border: 10px solid #444;
+    border-radius: 50%;
+    box-shadow: 0 8px #222;
+    /* Position */
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Extra details */
+    content: '';
+    position: absolute;
+}
+
+/* Shiny mid-bowl detail */
+.bowl::after {
+    /* Drawing */
+    width: 105px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.05);
+    /* Position */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Extra details */
+    content: '';
+    position: absolute;
+}
+
+/* Liquid inside the bowl */
+.liquid {
+    /* Drawing */
+    border-bottom-left-radius: 105px;
+    border-bottom-right-radius: 105px;
+    background-color: #41c1fb;
+    filter: drop-shadow(0 0 56px #41c1fb); /* Glowing effect */
+    /* Position */
+    top: 50%;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    /* Extra details */
+    position: absolute;
+    transform-origin: top center;
+    animation: liquidAnimation 5s linear infinite; /* Repeat animation at same speed (5 seconds), all the time */
+}
+
+/* Upper-liquid */
+.liquid::before {
+    /* Drawing */
+    width: 100%;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #1fa4e0;
+    filter: drop-shadow(0 0 56px #41c1fb); /* Glowing effect */
+    /* Position */
+    top: -7px;
+    left: 0;
+    /* Extra details */
+    content: '';
+    position: absolute;
+}
+
+/* Bowl shadow */
+.shadow {
+    /* Drawing */
+    width: 210px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    /* Position */
+    top: calc(50% + 105px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Extra details */
+    position: absolute; 
+}
+
+/* ANIMATIONS */
+/* Bowl animation */
+@keyframes bowlAnimation {
+    0% {
+        filter: hue-rotate(0deg); /* Change the liquid color */
+        transform: rotate(0deg); /* Rotate the bowl */
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(0deg);
+    }
+}
+
+/* Liquid animation */
+@keyframes liquidAnimation {
+    0% {
+        transform: rotate(0deg); /* Rotate the liquid */
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
