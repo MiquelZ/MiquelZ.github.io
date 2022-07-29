@@ -1,0 +1,32 @@
+/* Bouncing ball */
+.ball {
+    /* Drawing */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6), 15px 15px 2px rgba(0, 0, 0, 0.04); /* Give 3D effect to the ball */
+    /* Extra details */
+    position: absolute;
+    display: block;
+    animation: moveX 2.05s linear 0s infinite alternate, moveY 2.4s linear 0s infinite alternate;
+}
+
+/* Move ball X animation */
+@keyframes moveX {
+    from {
+        left: 0;
+    }
+    to {
+        left: 310px; /* Card width - Ball width */
+    }
+}
+
+/* Move ball Y animation */
+@keyframes moveY {
+    from {
+        top: 0;
+    } to {
+        top: 360px; /* Card height - Ball height */
+    }
+}

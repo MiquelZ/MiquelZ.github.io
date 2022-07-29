@@ -1,0 +1,59 @@
+/* GENERAL STEPS ANIMATIONS */
+#generalStepsAnimations {
+    /* Fill the card */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Center the bowl */
+    display: grid;
+    grid-template-rows: 175px 175px;
+    grid-template-columns: auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+/* SPRITESHEETS STYLES */
+/* Monster */
+.monster {
+    /* Monster image */
+    background-image: url("../img/monsterSpritesheet.png");
+    transform: translate(80px, -25px) scale(0.6); /* Resize and reposition to fit the web */
+    /* Extra details */
+    width: 190px; /* Each frame width */
+    height: 240px; /* Each frame height */
+    position: relative;
+    animation: monsterAnimation 0.8s steps(10) infinite; /* Repeat animation, 10 frames in total, all the time */
+}
+
+/* Bird */
+.bird {
+    /* Bird image */
+    background-image: url("../img/birdSpritesheet.png");
+    transform: translate(25px, -70px) scale(0.5); /* Resize and reposition to fit the web */
+    /* Extra details */
+    width: 300px; /* Each frame width */
+    height: 300px; /* Each frame height */
+    position: relative;
+    animation: birdAnimation 0.8s steps(10) infinite; /* Repeat animation, 10 frames in total, all the time */
+}
+
+/* ANIMATIONS */
+/* Monster animation, move through each spritesheet's frame */
+@keyframes monsterAnimation {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1900px; /* Each original frame width (190px) * 10 steps */
+    }
+}
+
+/* Bird animation, move through each spritesheet's frame */
+@keyframes birdAnimation {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -3000px; /* Each original frame width (300px) * 10 steps */
+    }
+}

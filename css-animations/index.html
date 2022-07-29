@@ -18,22 +18,31 @@
         <link rel="stylesheet" href="css/general.css"/>        
         <!-- liquid bowl card -->
         <link rel="stylesheet" href="css/bowl.css"/>
+        <!-- steps animations (spritesheets) card -->
+        <link rel="stylesheet" href="css/stepsAnimations.css"/>
         <!-- fingerprint scan card -->
         <link rel="stylesheet" href="css/fingerprint.css"/>
+        <!-- bouncing ball card -->
+        <link rel="stylesheet" href="css/bouncingBall.css"/>
+        <!-- 3d layered image card -->
+        <link rel="stylesheet" href="css/3dLayeredImage.css"/>
+        <!-- ambient light cube card -->
+        <link rel="stylesheet" href="css/lightCube.css"/>
     </head>
 
     <body>
-        <section id="general">
+        <div id="general">
+            
             <!-- Bowl card -->
             <div class="card">
                 <!-- Card content -->
                 <div class="content">
-                    <section id="bowlSection">
+                    <div id="generalBowl">
                         <div class="shadow"></div>
                         <div class="bowl">
                             <div class="liquid"></div>
                         </div>
-                    </section>
+                    </div>
                 </div>
                 <!-- Card details -->
                 <div class="details">
@@ -45,14 +54,39 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Steps animations (spritesheets) card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="content">
+                    <div id="generalStepsAnimations">
+                        <div class="monster"></div>
+                        <div class="bird"></div>
+                    </div>
+                </div>
+                <!-- Card details -->
+                <div class="details">
+                    <h2>Spritesheets animations</h2>
+                    <ul>
+                        <li>CSS animations (steps, position)</li>
+                        <li>Monster spritesheet credit to
+                            <a href="https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/blog/monster.png" target="_blank" rel="noopener noreferrer">Guil H</a>
+                        </li>
+                        <li>Bird spritesheet credit to
+                            <a href="http://sandbox.deafinbothears.com/bird-flight/images/bird-sprite.png" target="_blank" rel="noopener noreferrer">Jade Snowball</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
             <!-- Fingerprint scan card -->
             <div class="card">
                 <!-- Card content -->
                 <div class="content">
-                    <section id="scan">
+                    <div id="generalScan">
                         <div class="fingerprint"></div>
 		                <p class="scanningText">Scanning...</p>
-                    </section>
+                    </div>
                 </div>
                 <!-- Card details -->
                 <div class="details">
@@ -67,21 +101,80 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Bouncing ball card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="content">
+                    <div class="ball"></div>
+                </div>
+                <!-- Card details -->
+                <div class="details">
+                    <h2>Bouncing ball</h2>
+                    <ul>
+                        <li>CSS animations (move)</li>
+                        <li>3D effect</li>
+                        <li>All drawn using CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3D layered image card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="content">
+                    <div class="container">
+                        <div class="imgBx">
+                            <img src="img/image.jpg" style="--i:2;--j:0;">
+                            <img src="img/image.jpg" style="--i:1;--j:1;">
+                            <img src="img/image.jpg" style="--i:0;--j:2;">
+                            <img src="img/image.jpg" style="--i:-1;--j:3;">
+                            <img src="img/image.jpg" style="--i:-2;--j:4;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card details -->
+                <div class="details">
+                    <h2>Bouncing ball</h2>
+                    <ul>
+                        <li>CSS animations (move)</li>
+                        <li>3D effect</li>
+                        <li>All drawn using CSS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ambient light cube card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="content">
+                    <div class="cube">
+                        <div class="top"></div>
+                        <div>
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card details -->
+                <div class="details">
+                    <h2>Fingerprint scanning</h2>
+                    <ul>
+                        <li>CSS animations (move, opacity)</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="card">
                 <p>hola</p>
             </div>
             <div class="card">
                 <p>hola</p>
             </div>
-            <div class="card">
-                <p>hola</p>
-            </div>
-            <div class="card">
-                <p>hola</p>
-            </div>
-            <div class="card">
-                <p>hola</p>
-            </div>
-        </section>
+
+            
+        </div>
     </body>
 </html>
