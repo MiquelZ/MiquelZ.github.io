@@ -1,14 +1,34 @@
+/* GENERAL WEB STYLE, MOBILE FIRST (EXTRA SMALL DEVICES 0px-600px) */
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background: #222222;
+    background: #181A1E;
+    font-family: 'Poppins', sans-serif;
+}
+
+#title {
+    margin: 2rem;
+    text-align: center;
+    color: #EDEFFD;
+}
+
+#title h1 {
+    margin-bottom: 0 !important;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#title h2 {
+    margin-top: 0 !important;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 /* Cards general section */
-#general {
-    margin: 75px;
+#cardGrid {
+    margin: 0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid, minimum card width 350px */
     grid-gap: 2rem;
@@ -22,9 +42,9 @@ body {
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
-    border-radius: 10px;
-    background: #121212;
-    box-shadow: 0 10px 40px #000000;
+    border-radius: 1rem;
+    background: #202528;
+    box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,0.8);
 }
 
 /* Card content style */
@@ -42,7 +62,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,10 +72,37 @@ body {
     background: #F0FFFF;
     opacity: 0;
     transition: 0.5s;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Appear card details when hover with mouse */
 .card:hover .details {
     opacity: 0.9;
+}
+
+/* Media query for small devices like large mobile phones and portrait tables (600px-780px) */
+@media only screen and (min-width: 600px) {
+    #cardGrid {
+        margin: 1.5rem;
+        grid-gap: 3rem;
+    }
+}
+
+/* Media query for medium and large devices (780px and up)  */
+@media only screen and (min-width: 768px) {
+    #title h1 {
+        font-size: 3.5rem;
+    }
+
+    #title h2 {
+        font-size: 2.5rem;
+    }
+    
+    #cardGrid {
+        margin: 3rem;
+        grid-gap: 4rem;
+    }
+
+    .card {
+        box-shadow: 0 2rem 3rem rgba(0,0,0,0.8);
+    }
 }
