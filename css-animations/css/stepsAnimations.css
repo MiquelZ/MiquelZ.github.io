@@ -16,7 +16,7 @@
 /* Monster */
 .monster {
     /* Monster image */
-    background-image: url("../img/monsterSpritesheet.png");
+    background: url("../img/monsterSpritesheet.png");
     transform: translate(80px, -25px) scale(0.6); /* Resize and reposition to fit the web */
     /* Extra details */
     width: 190px; /* Each frame width */
@@ -28,7 +28,7 @@
 /* Bird */
 .bird {
     /* Bird image */
-    background-image: url("../img/birdSpritesheet.png");
+    background: url("../img/birdSpritesheet.png");
     transform: translate(25px, -70px) scale(0.5); /* Resize and reposition to fit the web */
     /* Extra details */
     width: 300px; /* Each frame width */

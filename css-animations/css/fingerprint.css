@@ -18,7 +18,7 @@
 	position: relative;
 	width: 210px;
 	height: 266px;
-	background-image: url("../img/fingerprint1.png");
+	background: url("../img/fingerprint1.png");
 	background-size: 210px;
 }
 
@@ -44,10 +44,10 @@
     width: 100%;
 	height: 6px;
     border-radius: 4px;
-	background-color: #3fefef;
+	background: #00FFFF;
     background-size: 210px;
-    filter: drop-shadow(0 0 14px #3fefef) drop-shadow(0 0 42px #3fefef); /* Glowing effect */
-    box-shadow: 0 0 17px #000;
+    filter: drop-shadow(0 0 14px #00FFFF) drop-shadow(0 0 42px #00FFFF); /* Glowing effect */
+    box-shadow: 0 0 17px #000000;
     /* Position */
     top: 3%;
 	left: 0;
@@ -62,13 +62,13 @@
     /* Text properties */
 	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
-	font-size: 2rem;
-	letter-spacing: 0.3rem;
-    color: #3fefef;
+	font-size: 30px;
+	letter-spacing: 5px;
+    color: #00FFFF;
     /* Extra details */
 	margin-top: 25px;
 	opacity: 0;
-	filter: drop-shadow(0 0 14px #3fefef) drop-shadow(0 0 42px #3fefef);
+	filter: drop-shadow(0 0 14px #00FFFF) drop-shadow(0 0 42px #00FFFF);
 	animation: animateText 0.6s steps(1) infinite; /* Repeat animation (0.6 seconds), with only 1 step (less smooth and less continuous on purpose), all the time */
 }
 

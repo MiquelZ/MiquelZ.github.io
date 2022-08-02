@@ -1,37 +1,33 @@
-.imgBx 
-{
-	position: relative;
-	width: 300px;
-	height: 300px;
-	margin: 60px;
-	transform-style: preserve-3d;
-	perspective: 1000px;
-	transition: 0.25s;
+/* Image box */
+.imageBox {
+    /* Image size */
+	width: 180px;
+	height: 180px;
+    /* Extra details */
+    position: relative;
+	transform-style: preserve-3d; /* 3D effect */
 }
 
-.imgBx img 
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+/* Each layer image */
+.layerImage {
+    /* Position */
+    width: 100%;
 	height: 100%;
-	object-fit: cover;
-	transition: 0.5s;
-	z-index: calc(1 + var(--i));
-	opacity: calc(1 - (0.2 * var(--j)));
-    animation: layerImage 4s ease infinite; /* Repeat animation, 10 frames in total, all the time */
+    top: 110px;
+    left: 90px;
+    z-index: var(--imageLayer);
+    /* Extra details */
+    content: url("../img/image.jpg");
+	position: absolute;
+    object-fit: cover;
+    opacity: calc(1 - (0.2 * var(--imageNum)));
+	animation: animateLayerImage 4s ease infinite; /* Repeat animation, slower at the start and end, all the time */
 }
 
-.imgBx:hover img 
-{
-	transform: rotate(-30deg) skew(25deg) translateX(calc(35px * var(--i))) translateY(calc(-35px * var(--i)))scale(0.9);;
-	box-shadow: -20px 20px 20px rgba(0,0,0,0.25);
-}
-
-@keyframes layerImage {
+/* Layer the image with a 3D effect */
+@keyframes animateLayerImage {
     50% {
-        transform: rotate(-30deg) skew(25deg) translateX(calc(35px * var(--i))) translateY(calc(-35px * var(--i)))scale(0.9);;
-	    box-shadow: -20px 20px 20px rgba(0,0,0,0.25);
+        transform: rotate(-30deg) skew(25deg) translateX(calc(21px * var(--imageLayer))) translateY(calc(-21px * var(--imageLayer))) scale(0.9); /* Layering calculation */
+	    box-shadow: -20px 20px 20px rgba(0,0,0,0.25); /* Shadow detail between layers */
     }
 }

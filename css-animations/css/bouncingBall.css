@@ -4,8 +4,8 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: red;
-    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6), 15px 15px 2px rgba(0, 0, 0, 0.04); /* Give 3D effect to the ball */
+    background-color: #DC143C;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6), 15px 15px 2px rgba(0,0,0,0.05); /* Give 3D effect to the ball */
     /* Extra details */
     position: absolute;
     display: block;

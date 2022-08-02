@@ -18,7 +18,7 @@
     height: 210px;
     border: 6px solid transparent;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: #333333;
     /* Extra details */
     position: relative;
     transform-origin: bottom center;
@@ -30,9 +30,9 @@
     /* Drawing */
     width: 40%;
     height: 21px;
-    border: 10px solid #444;
+    border: 10px solid #444444;
     border-radius: 50%;
-    box-shadow: 0 8px #222;
+    box-shadow: 0 8px #222222;
     /* Position */
     top: -10px;
     left: 50%;
@@ -48,7 +48,8 @@
     width: 105px;
     height: 56px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.05);
+    background: #999999;
+    opacity: 0.15;
     /* Position */
     top: 40%;
     left: 50%;
@@ -63,8 +64,8 @@
     /* Drawing */
     border-bottom-left-radius: 105px;
     border-bottom-right-radius: 105px;
-    background-color: #41c1fb;
-    filter: drop-shadow(0 0 56px #41c1fb); /* Glowing effect */
+    background: #41C1FB;
+    filter: drop-shadow(0 0 56px #41C1FB); /* Glowing effect */
     /* Position */
     top: 50%;
     left: 3px;
@@ -82,8 +83,8 @@
     width: 100%;
     height: 14px;
     border-radius: 50%;
-    background-color: #1fa4e0;
-    filter: drop-shadow(0 0 56px #41c1fb); /* Glowing effect */
+    background: #1FA4E0;
+    filter: drop-shadow(0 0 56px #41C1FB); /* Glowing effect */
     /* Position */
     top: -7px;
     left: 0;
@@ -98,9 +99,10 @@
     width: 210px;
     height: 21px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.5);
+    background: #000000;
+    opacity: 0.7;
     /* Position */
-    top: calc(50% + 105px);
+    top: calc(50% + 110px);
     left: 50%;
     transform: translate(-50%, -50%);
     /* Extra details */
